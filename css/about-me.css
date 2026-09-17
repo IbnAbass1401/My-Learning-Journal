@@ -1,0 +1,352 @@
+/* ========================================
+   GOOGLE FONTS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+
+/* ========================================
+   ROOT VARIABLES
+======================================== */
+
+:root {
+    --background: #ffffff;
+    --surface: #f7f8fa;
+    --text: #17191c;
+    --muted: #626a73;
+    --border: #e4e7eb;
+    --accent: #111111;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Space Mono", monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+
+/* ========================================
+   ABOUT HERO
+======================================== */
+
+.about-hero {
+    padding: 120px 0 100px;
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+    color: #737b84;
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.about-hero h1 {
+    max-width: 850px;
+    margin: 0 0 30px;
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.about-hero h1 span {
+    display: block;
+    color: #7b838c;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding: 90px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+
+/* ========================================
+   CONTENT LAYOUT
+======================================== */
+
+.story,
+.challenges,
+.tech-section,
+.commitment,
+.future {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+}
+
+.story .section-heading,
+.challenges .section-heading,
+.tech-section .section-heading,
+.commitment .section-heading,
+.future .section-heading {
+    margin-bottom: 0;
+}
+
+.story-content,
+.challenge-content,
+.tech-content,
+.commitment-content,
+.future-content {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.story-content p,
+.challenge-content p,
+.tech-content p,
+.commitment-content p,
+.future-content p {
+    margin-bottom: 24px;
+}
+
+.story-content p:last-child,
+.challenge-content p:last-child,
+.tech-content p:last-child,
+.commitment-content p:last-child,
+.future-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   COMMITMENT
+======================================== */
+
+.commitment-section {
+    background: var(--surface);
+}
+
+.highlight {
+    padding-top: 25px;
+    color: var(--text);
+    font-weight: 600;
+    border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   FINAL LINE
+======================================== */
+
+.final-line {
+    padding-top: 25px;
+    color: var(--text);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 28px 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* ========================================
+   MEDIA QUERIES
+======================================== */
+
+@media (max-width: 800px) {
+
+    .about-hero {
+        padding: 90px 0 80px;
+    }
+
+    .story,
+    .challenges,
+    .tech-section,
+    .commitment,
+    .future {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .section-heading {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 28px, 1100px);
+    }
+
+    .nav {
+        min-height: 62px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .about-hero {
+        padding: 75px 0 70px;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+        line-height: 1.02;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .story-content,
+    .challenge-content,
+    .tech-content,
+    .commitment-content,
+    .future-content {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}

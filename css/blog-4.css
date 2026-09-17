@@ -1,0 +1,366 @@
+/* ========================================
+   GOOGLE FONTS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+
+/* ========================================
+   ROOT VARIABLES
+======================================== */
+
+:root {
+    --background: #ffffff;
+    --surface: #f7f8fa;
+    --text: #17191c;
+    --muted: #626a73;
+    --border: #e4e7eb;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    min-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--text);
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+
+/* ========================================
+   BLOG HERO
+======================================== */
+
+.blog-hero {
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.25) 35%,
+            rgba(0, 0, 0, 0.85) 100%
+        ),
+        url("../images/blog-4.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.blog-hero-content {
+    padding-top: 100px;
+
+    padding-bottom: 70px;
+
+    color: #ffffff;
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+
+    color: #e4e7eb;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.blog-hero h1 {
+    max-width: 900px;
+
+    margin: 0 0 25px;
+
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+.blog-intro {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #e1e4e8;
+
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   BLOG CONTENT
+======================================== */
+
+.blog-content {
+    padding: 90px 0 110px;
+}
+
+.article {
+    max-width: 760px;
+}
+
+.article p {
+    margin: 0 0 30px;
+
+    color: #4f5862;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+}
+
+.article .closing-line {
+    padding-top: 30px;
+
+    margin-top: 35px;
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 28px 0;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--text);
+}
+
+
+/* ========================================
+   MEDIA QUERIES
+======================================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 28px, 1100px);
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .nav {
+        min-height: 62px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+
+    /* ---------- BLOG HERO ---------- */
+
+    .blog-hero {
+        min-height: 540px;
+
+        background-position: center;
+    }
+
+    .blog-hero-content {
+        padding-top: 80px;
+
+        padding-bottom: 50px;
+    }
+
+    .blog-hero h1 {
+        font-size: clamp(2.4rem, 12vw, 4rem);
+
+        line-height: 1.02;
+    }
+
+    .blog-intro {
+        font-size: 1rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* ---------- BLOG CONTENT ---------- */
+
+    .blog-content {
+        padding: 65px 0 80px;
+    }
+
+    .article p {
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 450px) {
+
+    .blog-hero {
+        min-height: 500px;
+    }
+
+    .blog-hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .eyebrow {
+        font-size: 0.7rem;
+    }
+}

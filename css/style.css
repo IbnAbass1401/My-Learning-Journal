@@ -17,6 +17,7 @@ body {
 
 html {
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -36,6 +37,12 @@ h1 {
 
 /* ----- lAYOUT ----- */
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -47,7 +54,6 @@ i {
 }
  
 .container {
-    width: 90%;
     margin: 0 auto;
     background-color: #fFFFFF;
 }
@@ -62,7 +68,7 @@ header .container,
 header .container {
     justify-content: space-between;
     align-items: center;
-    padding: 0.8em 0;
+    padding: 0.8em 1em;
 }
 
 a {
@@ -186,6 +192,11 @@ footer .paragragh-two {
 /* ----- MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
+
+    header .container {
+        padding: 0.8em 2em;
+    }
+
     .intro {
         min-height: 400px;
     }
@@ -209,12 +220,24 @@ footer .paragragh-two {
 
 
 @media (min-width: 1024px) {
+
+    header .container {
+        padding: 0.8em 3em;
+    }
+
     .intro {
         min-height: 480px;
+        padding-bottom: 2em;
     }
     
     .intro-text {
         padding: 18em 4em 0;
+    }
+
+    .intro-text h2 {
+        font-size: clamp(2.8rem, 7vw, 5.8rem);
+        line-height: 1;
+        letter-spacing: -0.055em;
     }
 
     .blog-posts {
